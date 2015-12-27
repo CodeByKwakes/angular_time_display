@@ -15,9 +15,24 @@
 
   <div class="container" ng-controller="MainController as main">
 
-  <div class="jumbotron">
-    <p>This time is {{ main.time}}</p>
-  </div>
+    <div class="jumbotron">
+      <p>This time is {{ main.time}}</p>
+    </div>
+    <div>
+      <!-- Relative Time – Directive -->
+      <time am-time-ago="main.time"></time>
+    </div>
+    <div>
+      <!-- Date Format – Filter -->
+      <time>{{ main.time | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}</time>
+    </div>
+    <div>
+      <!-- Calendar Format – Filter -->
+      <time>{{ main.time | amCalendar }}</time>
+    </div>
+    <div>
+      <time title="{{ main.time | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}">{{ main.time | amCalendar }}</time>
+    </div>
     
   </div>
 

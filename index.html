@@ -18,19 +18,23 @@
     <div class="jumbotron">
       <p>This time is {{ main.time}}</p>
     </div>
-    <div>
+
+    <div class="jumbotron">
       <!-- Relative Time – Directive -->
       <time am-time-ago="main.time"></time>
     </div>
-    <div>
+
+    <div class="jumbotron">
       <!-- Date Format – Filter -->
       <time>{{ main.time | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}</time>
     </div>
-    <div>
+
+    <div class="jumbotron">
       <!-- Calendar Format – Filter -->
       <time>{{ main.time | amCalendar }}</time>
     </div>
-    <div>
+
+    <div class="jumbotron">
       <time title="{{ main.time | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}">{{ main.time | amCalendar }}</time>
     </div>
     
